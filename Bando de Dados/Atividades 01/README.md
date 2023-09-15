@@ -1,276 +1,176 @@
-# Banco de dados (AC1)
+# Facens - Banco de dados (AC1)
+
+<div align="center">
+	
+![Facens](https://mlogu6g7z5ex.i.optimole.com/cb:RF8R~518a6/w:500/h:159/q:90/ig:avif/https://facens.br/wp-content/uploads/2021/03/logo-f-b.png)
+
+</div>
 
 ## Exercicios Diagrama
 
 ### 1. PetShop
-![PetShop](https://github.com/WilliamVSan/Facens/assets/86013044/09302069-0e4a-4e21-b7ef-d2b34804ba4b)
+
+![PetShop](https://github.com/WilliamVSan/Facens/assets/86013044/71867579-32b2-4847-983a-a7d9dbc8316b)
+
+#### Tabela:
+
+    CREATE TABLE pets{
+    id INT,
+    nome VARCHAR(65),
+    especie VARCHAR(65),
+    nadaDeNascimento DATE
+    };
+
+    CREATE TABLE clientes{
+    id INT,
+    nome VARCHAR(65),
+    email VARCHAR(85),
+    cpf VARCHAR(13),
+    telefone VARCHAR(16)
+    };
+
+    INSERT INTO pets VALUES (01, "Neko", "Gato", "03-08-2000");
+    INSERT INTO clientes VALUES (01, "Uiu", "uiu@gmail.com", "98392831309", "15 998230372");
 
 ### 2. Games
-![Games](https://github.com/WilliamVSan/Facens/assets/86013044/f827c169-2792-4a1c-9842-588324e5a13b)
 
+![Games](https://github.com/WilliamVSan/Facens/assets/86013044/4131e8a9-9fcb-4c45-a90a-7738d4405c9d)
+
+#### Tabela:
+
+    CREATE TABLE devs{
+    id INT,
+    nome VARCHAR(65),
+    cpf VARCHAR(13),
+    dataDeNascimento DATE
+    };
+    
+    CREATE TABLE projetos{
+    id INT,
+    nome VARCHAR(65),
+    genero VARCHAR(65),
+    dataDeLancamento DATE,
+    faixaEtaria VARCHAR(3)
+    };
+
+    INSERT INTO devs VALUES (01, "Uiu", "09812374609", "03-08-2000");
+    INSERT INTO projetos VALUES (01, "Baldur's Gate 3", "RPG", "03-08-2023", "15+");
+    
 ### 3. Biblioteca
-![Biblioteca](https://github.com/WilliamVSan/Facens/assets/86013044/afd27c4d-9de7-4167-a6cb-ce417d560560)
+
+![Biblioteca](https://github.com/WilliamVSan/Facens/assets/86013044/8ca80700-7d57-4077-896e-36874e2471c2)
+
+#### Tabela:
+
+    CREATE TABLE autores{
+    id INT,
+    nome VARCHAR(65),
+    email VARCHAR(85),
+    nacionalidade VARCHAR(16),
+    dataDeNascimento DATE
+    };
+
+    CREATE TABLE livros{
+    id INT,
+    titulo VARCHAR(65),
+    qtdePaginas INT,
+    acabamento VARCHAR(16),
+    editora VARCHAR(32)
+    };
+
+    INSERT INTO autores VALUES (01, "Uiu", "uiu@email.com", "Brasileiro", "03-08-2000");
+    INSERT INTO livros VALUES (01, "LENDAS DE DRAGONLANCE VOL. 1", 416, "Capa Mole", "Jambo Editora");
 
 ### 4. Locadora
-![Locadora](https://github.com/WilliamVSan/Facens/assets/86013044/c2809808-5983-428d-9f41-63f1fad4e7d5)
+
+![Locadora](https://github.com/WilliamVSan/Facens/assets/86013044/36b88bce-49ac-4424-97e3-5c0b883973e5)
+
+#### Tabela:
+
+    CREATE TABLE automoveis{
+    id INT,
+    modelo VARCHAR(32),
+    placa VARCHAR(65),
+    nomeMontadora VARCHAR(65),
+    logotipo VARCHAR(65),
+    site VARCHAR(85),
+    anoDeLancamento DATE
+    };
+
+    INSERT INTO automoveis VALUES(01, "Cruze", "02931923", "Chevrolet", "Logo Chevrolet", "https://chevrolet.com.br", "01-01-2012");
 
 ### 5. Supermercado
-![Supermercado](https://github.com/WilliamVSan/Facens/assets/86013044/ba980fe3-182b-4b94-bffc-dd6ac5a25d9c)
+
+![Supermercado](https://github.com/WilliamVSan/Facens/assets/86013044/431d4fe2-0fef-48ef-a134-c210b17840e1)
+
+#### Tabela:
+
+    CREATE TABLE produtos{
+    id INT,
+    nome VARCHAR (65),
+    sac VARCHAR(16),
+    marca VARCHAR(32),
+    preco DECIMAL(10, 2),
+    qtdeEstoque INT,
+    nacionalidade VARCHAR(16)
+    };
+
+    INSERT INTO produto VALUES(01, "Bolacha", "SAC", "Marca", 100.0, 9, "Brasileiro");
 
 ## 6. Videoteca
-![Videoteca](https://github.com/WilliamVSan/Facens/assets/86013044/43d202f4-d9f7-495d-ac4a-1dc116ba15d6)
 
+![Videoteca](https://github.com/WilliamVSan/Facens/assets/86013044/86951970-d8ca-4b8d-b209-ef5ea17854a3)
+
+#### Tabela:
+
+    CREATE TABLE filmes{
+    id INT,
+    titulo VARCHAR(65),
+    idiomaOriginal VARCHAR(16),
+    duracao VARCHAR(10, 2),
+    preco DECIMAL(10, 2)
+    };
+
+    CREATE TABLE elencos{
+    id INT,
+    nome VARCHAR(65),
+    nacionalidade VARCHAR(16),
+    dataDeNascimento DATE
+    };
+
+    INSERT INTO filmes VALUES(01, "Mission: Impossible – Dead Reckoning Part Two", "Inglês", "01:50:00", 9.99);
+    INSERT INTO elencos VALUES(01, "Tom Cruise", "Norte-Americano", "03-07-1962");
 
 ## Tabelas relacionadas aos diagramas dos exercicios:
 
 ### 1.
-CREATE TABLE TAB_ALUNO_a (
 
-  ID VARCHAR2(4000),
-  
-  RA VARCHAR2(200),
-  
-  NOME VARCHAR2(200),
-  
-  Data_Nascimento DATE(8),
-  
-  Endereco_Email VARCHAR2(4000)
-  );
-  
-  CREATE TABLE TAB_Aluno_b
-  (
-   ID VARCHAR(4000)
-   );
-   INSERT INTO TAB_Aluno_a(ID, RA, NOME, Data_Nascimento, Endereco_Email) 
-   VALUES('1', '2360323', 'Afonso', 2000-06-10, 'afonso@email.com');
-   
-   INSERT INTO TAB_Aluno_a(ID, RA, NOME, Data_Nascimento, Endereco_Email) 
-   VALUES('1', '236058', 'Maria', 1994-05-12, 'maria@email.com');
-   
-   INSERT INTO TAB_Aluno_a(ID, RA, NOME, Data_Nascimento, Endereco_Email) 
-   VALUES('1', '236034', 'William', 1997-03-20, 'will@email.com');
-   
-   INSERT INTO TAB_Aluno_a(ID, RA, NOME, Data_Nascimento, Endereco_Email) 
-   VALUES('1', '236056', 'Clayton', 1998-07-11, 'clayton@email.com');
+    CREATE TABLE alunos{
+    id INT,
+    ra VARCHAR(6),
+    nome VARCHAR(65),
+    dataDeNascimento DATE,
+    email VARCHAR(85),
+    };
 
-
+    INSERT INTO alunos VALUES(01, "236032", "Afonso", "10-06-2000", "afonso@email.com");
+    INSERT INTO alunos VALUES(02, "236058", "Maria", "07-05-1999", "maria@email.com");
+    INSERT INTO alunos VALUES(03, "236034", "William", "20-03-2011", "will@email.com");
+    INSERT INTO alunos VALUES(04, "236056", "Clayton", "11-07-1997", "clayton@email.com");
 
 ### 2.
 
-CREATE TABLE TAB_colaborador_a
+    CREATE TABLE colaboradores{
+    id INT,
+    codigo VARCHAR(16),
+    nome VARCHAR(65),
+    cpf VARCHAR(13),
+    cargo VARCHAR(16),
+    salario DECIMAL(10, 2)
+    };
 
-(
-  ID VARCHAR2(4000),
-  
-  CODIGO VARCHAR2(4000),
-  
-  NOME VARCHAR2(4000),
-  
-  CPF VARCHAR2(4000),
-  
-  CARGO VARCHAR2(4000),
-  
-  SALARIO DECIMAL(4000)
-);
-  CREATE TABLE TAB_colaborador_b
-  (
-    ID VARCHAR2(4000)
-  );
-  INSERT INTO TAB_colaborador_a(ID, CODIGO, NOME, CPF, CARGO, SALARIO) 
-  VALUES ('1', 236059,'Afonso', '46401141848', 'Assistente de TI', 1.900,00 );
-  
-  INSERT INTO TAB_colaborador_a(ID, CODIGO, NOME, CPF, CARGO, SALARIO) 
-  ALUES ('1', 236059,'Ana', '46401141847', 'Assistente de TI', 1.900,00 );  
-  
-  INSERT INTO TAB_colaborador_a(ID, CODIGO, NOME, CPF, CARGO, SALARIO) 
-  VALUES ('1', 236059,'Clayton', '46401141846', 'Assistente de TI', 1.900,00 ); 
-  
-  INSERT INTO TAB_colaborador_a(ID, CODIGO, NOME, CPF, CARGO, SALARIO) 
-  VALUES ('1', 236059,'Isabela', '46401141845', 'Assistente de TI', 1.900,00 );  
-  
-  INSERT INTO TAB_colaborador_a(ID, CODIGO, NOME, CPF, CARGO, SALARIO) 
-  VALUES ('1', 236059,'William', '46401141844', 'Assistente de TI', 1.900,00 );  
-
-
-
-### 3.
-
-CREATE TABLE TAB_PET_SHOP
-(
-  ID VARCHAR2(4000),
-  
-  NOME_CLIENTE VARCHAR2(4000),
-  
-  CPF VARCHAR2(4000),
-  
-  EMAIL VARCHAR(4000),
-  
-  TELEFONE VARCHAR(4000),
-  
-  NOME_PET VARCHAR(4000),
-  
-  ESPECIE VARCHAR(4000),
-  
-  DATA_NASCIMENTO_PET DATA(4000)
-  );
-  
-  CREATE TABLE TAB_PET_SHOP_A
-  (
-    ID VARCHAR2(4000)
-  );
-  
-  INSERT INTO TAB_PET_SHOP (ID, NOME_CLIENTE, CPF, EMAIL, TELEFONE, NOME_PET, ESPECIE, DATA_NASCIMENTO_PET) 
-  VALUES ('1', 'André Felipe', 46401755822, 'Andre_felipefer@hotmail.com', '1599834-4442', 'THOR', 'SHI-TZU', 2020);
-
-        
-
-### 1.2.0 -  Banco de Dados Games 
-
-CREATE TABLE TAB_DESENVOLVEDORES(
-
-  ID INT,
-  
-  NOME_COLABORADOR VARCHAR2(200),
-  
-  CPF VARCHAR2(200),
-  
-  DATA_NASCIMENTO DATE
-);
-
-CREATE TABLE TAB_PROJETOS(
-
-	ID INT,
- 
-  	NOME_PROJETO VARCHAR2(200),
-   
-  	DATA_LANCAMENTO DATE,
-   
-  	GENERO VARCHAR2(200),
-   
-  	FAIXA_ETARIA VARCHAR2(100)
-   
- );
- 
- INSERT INTO TAB_DESENVOLVEDORES (ID, NOME_COLABORADOR, CPF, DATA_NASCIMENTO)
- VALUES (1,'André Felipe', '46401755800', '1996-06-10');
- 
- insert into TAB_PROJETOS (ID, NOME_PROJETO, DATA_LANCAMENTO, GENERO, FAIXA_ETARIA) 
- VALUES (2, 'UPX', '2023-09-04', 'TERROR', '18');
-
-);
-
-### 1.3.0 - Banco de Dados Biblioteca 
-
-CREATE TABLE TAB_LIVRO(
-
-ID INT,
-
-TITULO VARCHAR2(100),
-
-QTD_PAGINAS INT,
-
-ACABAMENTO VARCHAR (4000),
-
-EDITORA VARCHAR(200)
-
-);
-
-CREATE TABLE TAB_AUTOR(
-
-ID INT,  
-
-NOME VARCHAR2(200),
-
-NACIONALIDADE VARCHAR2(200),
-
-DATA_NASCIMENTO DATE,
-
-EMAIL VARCHAR2(200)
-);
-
-INSERT INTO TAB_LIVRO (ID, TITULO, QTD_PAGINAS, ACABAMENTO, EDITORA) 
-VALUES ('10', 'BANCO DE DADOS', 200, 'CAPA DURA', 'FACENS');
-
-INSERT INTO TAB_AUTOR (ID, NOME, NACIONALIDADE, DATA_NASCIMENTO, EMAIL) 
-VALUES ('11', 'ANDRÉ FELIPE', 'BRASILEIRO', 2000-01-01, 'ANDRE@HOTMAIL.COM');
-
-### 1.4.0 - Banco de Dados Locadora
-
- CREATE TABLE TAB_AUTOMOVEL(
- 
-ID INT,
-
-  MODELO VARCHAR2(200),
-  
-  ANO INT,
-  
-  PLACA VARCHAR2(200),
-  
-  LOGOTIPO VARCHAR2(200),
-  
-  NOME_MONTADORA VARCHAR2(200),
-  
-  SITE_MARCA VARCHAR2(200)
-);
-
-INSERT INTO TAB_AUTOMOVEL (ID, MODELO, ANO, PLACA, LOGOTIPO, NOME_MONTADORA, SITE_MARCA) 
-VALUES ('1400', 'FOX', 2013, 'YYYKK', 'WV', 'WOLKSVAGEM', 'WV.COM.BR');
-
-### 1.5.0 - Banco de Dados Supermercado
-
-CREATE TABLE TAB_PRODUTO (
-
-  ID INT,
-  
-  SAC VARCHAR2(2000),
-  
-  MARCA VARCHAR2(2000),
-  
-  PRECO DECIMAL,
-  
-  NOME_PRODUTO VARCHAR2(2000),
-  
-  NACIONALIDADE_PRODUTO VARCHAR2(2000),
-  
-  QTD_ESTOQUE INT
-);
-
-
-INSERT INTO TAB_PRODUTO (ID, SAC, MARCA, PRECO, NOME_PRODUTO, NACIONALIDADE_PRODUTO, QTD_ESTOQUE)
-VALUES (78911063, '0800-7070', 'KINOR', 7.99, 'CALDO DE GALINHA', 'MADE IN BRAZIL', 15);ercado.txt…]()
-
-
-### 1.6.0 - Banco de Dados Videoteca
-
-CREATE TABLE TAB_FILME(
-
-  ID INT,
-  
-  TITULO VARCHAR(200),
-  
-  DURACAO TIME,
-  
-  PRECO DECIMAL,
-  
-  IDIOMA VARCHAR(200)
-  
-);
-
-CREATE TABLE TAB_ELENCO(
-
-  ID INT,
-  
-  NOME_ATORES VARCHAR(200),
-  
-  DATA_NASCIMENTO DATE,
-  
-  NACIONALIDADE VARCHAR(200)
-);
-
-INSERT INTO TAB_FILME (ID, TITULO, DURACAO, PRECO, IDIOMA)
-VALUES (1404, 'Facens', '01:50:00', 20.00, 'PORTUGUES');
-
-INSERT INTO TAB_ELENCO (ID, NOME_ATORES, DATA_NASCIMENTO, NACIONALIDADE) 
-VALUES (1405, 'CLAYTON', '1996-06-10', 'BRASILEIRO');
-
-
+    INSERT INTO colaboradores VALUES(01, "236059", "Afonso", "46401141848", "Assistente de TI", 1900.00 );
+    INSERT INTO colaboradores VALUES(02, "236059", "Ana", "46401141847", "Assistente de TI", 1900.00 );  
+    INSERT INTO colaboradores values(03, "236059", "Clayton", "46401141846", "Assistente de TI", 1900.0 ); 
+    INSERT INTO colaboradores VALUES(04, "236059", "Isabela", "46401141845", "Assistente de TI", 1900.0 );  
+    INSERT INTO colaboradores VALUES(05, "236059", "William", "46401141844", "Assistente de TI", 1900.0 );  
