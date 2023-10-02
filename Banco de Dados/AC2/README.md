@@ -99,6 +99,9 @@ Ao término inicie a segunda etapa.
 
 ### 3ª Etapa
 
+  - [Script SQL](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/script_01.sql).
+
 #### Print do MySQL Workbench:
 
+![Print da tela](https://github.com/WilliamVSan/Facens/assets/86013044/d058f5dc-8a59-451a-ae9e-738f8f8418f7)
 
