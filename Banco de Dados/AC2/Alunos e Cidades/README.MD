@@ -51,3 +51,6 @@ SELECT * FROM Alunos INNER JOIN Cidades ON cidades.id = alunos.cidade_id;
 
 ## Critérios de Avaliação
 
+[Script](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Alunos%20e%20Cidades/script_cidades.sql)
+
+
