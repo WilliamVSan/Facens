@@ -1,4 +1,4 @@
-# Facens - Banco de dados (AC2)
+![image](https://github.com/WilliamVSan/Facens/assets/86013044/5731df75-b014-45ad-b013-2d7970b77b63)# Facens - Banco de dados (AC2)
 
 <div align="center">
 	
@@ -63,3 +63,10 @@ DROP TABLE especies;
 ```
 
 ## Critérios Para Correção
+
+### Script:
+
+[Script](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Tema%20Base%20de%20Dados%20Animais/script_base_animais.sql)
+
+**Imagem:**
+![MySQL](https://github.com/WilliamVSan/Facens/assets/86013044/0dffa1ce-03d6-4086-91db-965664c111f8)
