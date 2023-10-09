@@ -241,3 +241,17 @@ INSERT INTO Filmes (titulo, sinopse, estudio, id_categoria) VALUES
 ```
 
 ### Critérios de Avaliação
+
+#### Scripts:
+
+1. [Animais](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Etapa%2002/script_etapa02_animais.sql)
+2. [Filmes](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Etapa%2002/script_etapa02_filmes.sql)
+3. [Produtos](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Etapa%2002/script_etapa02_produtos.sql)
+
+**Imagens MySQL**:
+
+![Animais](https://github.com/WilliamVSan/Facens/assets/86013044/7458f0bf-5a6a-43f8-9e42-2c7dfe50c28f)
+
+![Filmes](https://github.com/WilliamVSan/Facens/assets/86013044/ff7652f0-9921-4f52-bbbb-86ce19668e21)
+
+![Produtos](https://github.com/WilliamVSan/Facens/assets/86013044/393279d7-5bed-4397-bab8-f3540a5c4c1e)
