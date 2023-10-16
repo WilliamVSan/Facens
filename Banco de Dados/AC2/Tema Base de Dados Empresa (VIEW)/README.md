@@ -90,17 +90,82 @@ INSERT INTO produtos_has_fornecedores (produtos_prd_id, fornecedores_frn_id) VAL
 
 1. Crie uma view que mostra todos os produtos e suas respectivas marcas;
 
+```SQL
+CREATE VIEW produtos_marcas_view AS
+SELECT p.prd_id, p.prd_nome, m.mrc_nome
+FROM produtos p
+JOIN marcas m ON p.marcas_mrc_id = m.mrc_id;
+```
+
 2. Crie uma view que mostra todos os produtos e seus respectivos fornecedores;
+
+```SQL
+CREATE VIEW produtos_fornecedores_view AS
+SELECT p.prd_id, p.prd_nome, f.frn_nome
+FROM produtos p
+JOIN produtos_has_fornecedores pf ON p.prd_id = pf.produtos_prd_id
+JOIN fornecedores f ON pf.fornecedores_frn_id = f.frn_id;
+```
 
 3. Crie uma view que mostra todos os produtos e seus respectivos fornecedores e marcas;
 
+```SQL
+CREATE VIEW produtos_fornecedores_marcas_view AS
+SELECT p.prd_id, p.prd_nome, m.mrc_nome, f.frn_nome
+FROM produtos p
+JOIN marcas m ON p.marcas_mrc_id = m.mrc_id
+JOIN produtos_has_fornecedores pf ON p.prd_id = pf.produtos_prd_id
+JOIN fornecedores f ON pf.fornecedores_frn_id = f.frn_id;
+```
+
 4. Crie uma view que mostra todos os produtos com estoque abaixo do mínimo;
+
+```SQL
+CREATE VIEW produtos_estoque_baixo_view AS
+SELECT *
+FROM produtos
+WHERE prd_qtd_estoque < prd_estoque_mim;
+```
 
 5. Adicione o campo data de validade. Insira novos produtos com essa informação;
 
+```SQL
+ALTER TABLE produtos
+ADD prd_data_validade DATE;
+
+INSERT INTO produtos (prd_nome, prd_qtd_estoque, prd_estoque_mim, prd_data_fabricacao, prd_perecivel, prd_valor, marcas_mrc_id, prd_data_validade) VALUES
+('Produto A', 100, 50, '2023-10-15 10:00:00', 1, 20.50, 1, '2024-03-15'),
+('Produto B', 150, 60, '2023-09-20 14:30:00', 0, 30.00, 2, '2024-04-20'),
+('Produto C', 80, 40, '2023-08-25 12:00:00', 1, 15.00, 3, '2023-12-25');
+```
+
 6. Crie uma view que mostra todos os produtos e suas respectivas marcas com validade vencida;
+
+```SQL
+CREATE VIEW produtos_validade_vencida_view AS
+SELECT p.prd_id, p.prd_nome, m.mrc_nome, p.prd_data_validade
+FROM produtos p
+JOIN marcas m ON p.marcas_mrc_id = m.mrc_id
+WHERE p.prd_data_validade < CURDATE();
+```
 
 7. Selecionar os produtos com preço acima da média.
 
 ```SQL
+CREATE VIEW produtos_preco_acima_media_view AS
+SELECT *
+FROM produtos
+WHERE prd_valor > (SELECT AVG(prd_valor) FROM produtos);
 ```
+
+## Critérios de Avaliação
+
+Este é o [LINK](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Tema%20Base%20de%20Dados%20Empresa%20(VIEW)/script_view_empresa.sql) para o Script.
+
+**Imagens:**
+
+![image](https://github.com/WilliamVSan/Facens/assets/86013044/3117c0d4-307f-47fc-afdf-60cc3890430e)
+
+![image](https://github.com/WilliamVSan/Facens/assets/86013044/d69caa50-263f-4fc8-b9ea-54fa92d38034)
+
+![image](https://github.com/WilliamVSan/Facens/assets/86013044/76d95411-b097-4e93-913a-38aa548f9740)
