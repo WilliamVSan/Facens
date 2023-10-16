@@ -103,5 +103,4 @@ INSERT INTO produtos_has_fornecedores (produtos_prd_id, fornecedores_frn_id) VAL
 7. Selecionar os produtos com preço acima da média.
 
 ```SQL
-
 ```
