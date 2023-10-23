@@ -171,4 +171,3 @@ DELIMITER ;
 
 ![MySQL](https://github.com/WilliamVSan/Facens/assets/86013044/7e396c8b-cbab-4beb-9c72-82fb586e0c53)
 
-)
