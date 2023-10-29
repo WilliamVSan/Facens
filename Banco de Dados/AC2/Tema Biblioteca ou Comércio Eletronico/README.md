@@ -203,3 +203,7 @@ JOIN livros l ON e.emprestimo_id = l.livro_id;
 **Imagens:**
 
 ![image](https://github.com/WilliamVSan/Facens/assets/86013044/8cc41895-7122-4dd3-80a2-e113505bf02f)
+
+[**Modelo**](https://github.com/WilliamVSan/Facens/blob/main/Banco%20de%20Dados/AC2/Tema%20Biblioteca%20ou%20Com%C3%A9rcio%20Eletronico/model_biblioteca.mwb):
+
+![image](https://github.com/WilliamVSan/Facens/assets/86013044/292d316e-45fc-4e90-a25a-3409580cc9f5)
