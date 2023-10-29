@@ -1,4 +1,4 @@
-![image](https://github.com/WilliamVSan/Facens/assets/86013044/07b4bbc4-6f6d-4bd6-acbb-b5504d61aa94)# Atividade Individual - Tema: Trigger
+# Atividade Individual - Tema: Trigger
 
 <div align="center">
 	
